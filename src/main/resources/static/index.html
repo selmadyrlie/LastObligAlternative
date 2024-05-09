@@ -1,10 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Oblig Three</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="index.js"></script>
 </head>
 <body>
-$END$
+<h1>Bestilling av kinobilletter</h1>
+
+<form class="form" id="skjema">
+    <div class="form-group">
+        <label for="film">Velg film:</label>
+        <select id="film">
+            <option value="" disabled selected hidden>Ingen film valgt</option>
+            <option value="porco rosso">Porco Rosso</option>
+            <option value="wall-e">Wall-e</option>
+            <option value="rango">Rango</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="antall">Antall:</label>
+        <input type="number" id="antall" min="1" max="9">
+    </div>
+    <div class="form-group">
+        <label for="fornavn">Fornavn:</label>
+        <input type="text" id="fornavn">
+    </div>
+    <div class="form-group">
+        <label for="etternavn">Etternavn:</label>
+        <input type="text" id="etternavn">
+    </div>
+    <div class="form-group">
+        <label for="tlf">Telefonnummer:</label>
+        <input type="tel" id="tlf">
+    </div>
+    <div class="form-group">
+        <label for="epost">Epost:</label>
+        <input type="email" id="epost">
+    </div>
+</form>
+
+
+<button class="btn btn-primary" id ="kjopBillett" >Kjøp billett</button>
+
+<h3>Alle billetter</h3>
+<div id="billetter"></div>
+
+<button class="btn btn-danger" id ="slett-btn" >Slett alle billetter</button>
+
+
 </body>
 </html>
