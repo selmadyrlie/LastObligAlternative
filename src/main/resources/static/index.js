@@ -1,4 +1,4 @@
-
+const HOST = "http://localhost:8080";
 $(document).ready(function() {
     // Function to handle buying a ticket
     function kjopBillett() {
@@ -11,10 +11,11 @@ $(document).ready(function() {
             epost: $("#epost").val(),
         };
 
-        $.post("http://localhost:8080/billetter/lagre", billett, function(result) {
+        $.post(`${HOST}/billetter/lagre`, billett, function(result) {
             hentAlleBilletter();
             console.log(result);
         });
+
 
         // Check if any field is empty
         if (!billett.film || !billett.antall || !billett.fornavn || !billett.etternavn || !billett.tlf || !billett.epost) {
@@ -33,9 +34,10 @@ $(document).ready(function() {
 
     // Function to retrieve all tickets
     function hentAlleBilletter() {
-        $.get("/billetter/hentAlle", function(billetter) {
+        $.get("http://localhost:8080/hentAlle", function(billetter) {
             formaterBilletter(billetter);
         });
+
     }
 
     // Function to format and display tickets

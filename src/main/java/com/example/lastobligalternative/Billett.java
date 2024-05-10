@@ -10,7 +10,6 @@ import jakarta.persistence.*;
 @Table(name = "billetter")
 public class Billett {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
